@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Poppins:wght@500&family=Alkatra:wght@500&family=Montserrat&
+          display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <h1><u>Task List</u></h1>
+    </div>
+    <div class="app">
+      <div class="container">
+        <div id="wrapper">
+          <input type="text" placeholder="Tasks to be done....">
+          <button id="add-btn">Add Task</button>
+        </div>
+        <div id="tasks">
+          <p id="pending-tasks">You have <span class="count-value"> 0 </span> tasks to finish </p>
+        </div>
+      </div>
+      <p id="error">Invalid Input !!  <br>It cannot be empty</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>

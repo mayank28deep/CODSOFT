@@ -1,0 +1,178 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #8c8c8c), url(photo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header{
+  font-family: 'Rubik';
+  text-align: center;
+  font-size: 32px;
+  color: whitesmoke;
+  padding-top: 55px;
+}
+
+.app{
+  font-family: 'Poppins';
+  width: min(95vw, 31.25em);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 190px;
+  padding-bottom: 32px;
+}
+
+.container{
+  padding: 25px  35px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  border: 1px solid #ffffff11;
+}
+
+#wrapper{
+  position: relative;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 1em;
+}
+#wrapper input{
+  width: 100%;
+  background-color: transparent;
+  color:  white;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2.3px solid #faebd7;
+  padding: 10px 2px;
+  font-family: 'Alkatra';
+}
+#wrapper input[type="text"]::-webkit-input-placeholder {
+  color: antiquewhite;
+}
+#wrapper input:focus{
+  color: white;
+  outline: none;
+  border-color: #000000;
+}
+#wrapper button{
+  position: relative;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 19px;
+  background-color: #2acaff;
+  border: 1px  solid #2acaff;
+  transition: 0.3s;
+  color: #000000;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  font-family: 'Montserrat';
+}
+#wrapper button:hover{
+  background-color: brown;
+  border: 1px  solid #a52a2a;
+  color: #ffff;
+}
+
+#tasks{
+  margin-top: 11px;
+  width: 100%;
+  position: relative;
+  padding: 14px 8px;
+}
+.task{
+  background-color: #ffffffd5;
+  padding: 16px 22px;
+  margin: 0  -4px  0  -3px;
+  display: grid;
+  grid-template-columns: 1fr  8fr  2fr  2fr;
+  gap: 1em;
+  border-radius: 8px;
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+.task:not(:first-child){
+  margin-top: 22px;
+}
+.task input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  height: 18px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px  solid  #808000;
+  cursor: pointer;
+}
+.task input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.task input[type="checkbox"]:checked {
+  background-color: olive;
+}
+.task input[type="checkbox"]:checked:before {
+  position: absolute;
+  content: "\f00c";
+  color: #ffff;
+  font-size: 10px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.task span{
+  font: 8px;
+  font-weight: 400;
+  word-break: break-all;
+}
+.task button{
+  color: #ffff;
+  width: 100%;
+  padding: 12px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.edit{
+  background-color: #008000;
+}
+.delete{
+  background-color: #ff0000;
+}
+.fa-solid{
+  font-size: large;
+}
+
+#pending-tasks span{
+  color: yellow;
+}
+.completed{
+  text-decoration: line-through;
+  color: orangered;
+}
+
+#error{
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: red;
+  margin-top: 1.6em;
+  padding: 1em  0;
+  border-radius: 0.8em;
+  display: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
